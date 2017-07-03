@@ -1,4 +1,4 @@
-# the-mithril-diaries
+# The Mithril Diaries
 
 Account of experiences finding/using the [Mithril](https://mithril.js.org/) javascript framework
 
