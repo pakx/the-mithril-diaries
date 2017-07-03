@@ -1,0 +1,25 @@
+.app-hdr {background-color:#efefef;margin-bottom:10px;padding:5px;width:90%;}
+.app-hdr > button {font-weight:bold;margin-right:2px;}
+.note {color:grey;font-family:monospace;font-size:0.9em;}
+.app-hdr > .note {display:none;}
+.line {border-bottom:inset;width:90%;}
+.square {background-color:cyan;height:25px;width:25px;}
+.stretched {height:2px;margin-bottom:2px;}
+.circle {background-color:cyan;border-radius:50%;height:25px;width:25px;}
+.triangle {border-color:transparent transparent cyan transparent;border-style:solid;border-width:0 14px 24px 14px;height:0;pointer-events:none;position:relative;width:0;}
+.demos {display:flex;flex-wrap:wrap;width:90%;}
+.demo {box-sizing:border-box;flex:1 0 300px;margin-bottom:20px;}
+.demo-hdr {font-family:monospace;margin-bottom:5px;}
+.timeline-controls button {border-radius:5px;width:60px;}
+.timeline-controls input[type='range'] {position:relative;top:5px;width:100px;}
+.switch-widget {overflow-x:hidden;}
+.widget {border-radius:3px;cursor:pointer;font-size:x-large;padding:5px 10px;width:175px}
+.widget > .note {font-size:x-small;}
+.widget1 {background-color:cyan;}
+.widget2 {border:3px solid cyan;}
+.switch-route {align-items:center;border:1px solid grey;border-radius:5px;display:flex;height:50px;justify-content:space-around;padding:5px 10px;width:200px;}
+.switch-route .active {background:yellow;font-weight:bold;padding:3px;}
+.route {font-family:monospace;font-size:large;}
+@media (max-width:699px) {
+  .app-hdr > .note {display:inline;}
+}
