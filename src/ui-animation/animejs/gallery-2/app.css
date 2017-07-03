@@ -1,0 +1,5 @@
+.line {border-bottom:inset;width:90%;}
+.square {height:25px;width:25px;background-color:cyan;}
+.stretched {height:2px;margin-bottom:2px;}
+.demo {margin-bottom:20px;}
+.header {font-family:monospace;margin-bottom:5px;}
