@@ -1,4 +1,4 @@
-/* https://github.com/pakx/the-mithril-diaries/wiki/ui-animation/AnimeJS#gallery-main */
+/* https://github.com/pakx/the-mithril-diaries/wiki/AnimeJS#gallery-main */
 
 function main() {
     var settings = {
@@ -10,6 +10,7 @@ function main() {
         , actions = createActions(model)
         , routeResolver = createRouteResolver(model, actions)
         , defaultRoute = settings.paths[0].route
+        
     m.route(document.body, defaultRoute, routeResolver)
 }
 
@@ -228,19 +229,17 @@ function createActions(model) {
         if (p.isAnimating) {return}
         p.isAnimating = true
 
-        var translateX = undefined
-            , attrs = {
+        var attrs = {
                 targets: p
                 , duration: 1500
                 , easing: "easeInSine"
-                , translateX: translateX === undefined ? -200 : translateX
+                , translateX: -200
                 , update: m.redraw
             }
             , anim = anime(attrs)
 
         anim.finished.then(function() {
             p.widgetId = p.widgetId == 0 ? 1 : 0
-        }).then(function() {
             attrs.translateX = 0
             anime(attrs)
                 .finished.then(function() {

@@ -1,7 +1,8 @@
-// https://github.com/pakx/the-mithril-diaries/wiki/ui-animation/AnimeJS#gallery-2-several-more-properties
+// https://github.com/pakx/the-mithril-diaries/wiki/AnimeJS#gallery-2-several-more-properties
 function main() {
     var model = createModel()
         , actions = createActions(model)
+        
     m.mount(document.body, view(model, actions))
 }
 

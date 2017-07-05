@@ -1,8 +1,9 @@
-// https://github.com/pakx/the-mithril-diaries/wiki/ui-animation/AnimeJS#gallery-1-translatex
+// https://github.com/pakx/the-mithril-diaries/wiki/AnimeJS#gallery-1-translatex
 
 function main() {
     var model = createModel()
         , actions = createActions(model)
+        
     m.mount(document.body, view(model, actions))
 }
 
