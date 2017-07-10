@@ -1,0 +1,21 @@
+html {height:100%;}
+body {font-family:monospace;margin:0px;height:100%;}
+.app {height:95%;width:99%;}
+.toolbar {padding:2px;border:1px solid green;}
+.toolbutton-group {border:1px solid grey;border-radius:5px;display:inline-block;min-height:10px;min-width:30px;padding:1px 10px;}
+.toolbutton-group-configurable {border-style:dashed;}
+.toolbar .toolbutton-group {margin-right:25px;}
+.toolbutton {border:1px solid black;border-radius:3px;cursor:default;display:inline-block;font-size:x-large;height:25px;margin:1px;position:relative;text-align:center;user-select:none;width:25px;}
+.config-dialog {align-items:center;border:1px solid green;display:flex;flex-direction:column;left:150px;position:absolute;top:100px;width:360px;}
+.workspace > .gu-transit {opacity:0;}
+.config-dialog-title {cursor:default;padding:3px;text-transform:capitalize;user-select:none;width:98%;}
+.config-dialog .toolbutton-group {margin:5px 9px;}
+.config-dialog-controls {border-top:1px solid grey;display:flex;justify-content:flex-end;margin:2px;width:95%;}
+.config-dialog-controls > button {margin:5px;user-select:none;width:75px;}
+.context-mnu {background-color:white;border:1px solid grey;cursor:default;position:absolute;user-select:none;width:100px;}
+.context-mnu .mnu-itm {padding:2px;}
+.context-mnu .mnu-itm:hover {background-color:#eee;}
+.context-mnu .mnu-sep {border-top:1px solid grey;margin:0px 2px;width:95%;}
+.puff {/*adapted from: http://jsfiddle.net/Y7Ek4/22/*/ background: url(http://i.imgur.com/wvPeK.png) no-repeat;cursor:none;height:32px;position:absolute;width:32px;}
+.puff-animated {animation:moveBg 400ms steps(4,end) 0s 1 normal forwards;}
+@keyframes moveBg {100% {background-position:bottom left;opacity:0;}}

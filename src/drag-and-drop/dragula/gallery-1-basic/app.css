@@ -1,0 +1,3 @@
+body {font-family:monospace;}
+.list {display:inline-block;padding:20px;}
+.node {border:1px solid grey;border-radius:5px;height:50px;margin-top:1px;user-select:none;width:100px;}

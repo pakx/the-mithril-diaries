@@ -1,0 +1,10 @@
+body {font-family:monospace;}
+.app {display:flex;flex-direction:vertical;}
+.panel {display:inline-block;text-align:center;}
+.lists {display:flex;margin:5px;padding:5px;}
+.list {display:inline-block;padding:20px;}
+.list-empty {background-color:#eee;border:1px dashed grey;border-radius:5px;height:25px;margin-top:22px;width:75px;}
+.node {border-radius:5px;height:50px;margin-top:1px;user-select:none;width:100px;}
+.model .node {border:dashed 1px grey;height:15px;}
+.num {background-color:cyan;}
+.alpha {background-color:limegreen;}
