@@ -26,7 +26,7 @@ function createModel() {
     toolbuttons["paste"] = {name:"paste", glyph:"V"}
 
 	return {
-        toolbuttons: toolbuttons
+        toolbuttons: toolbuttons    // all available toolbuttons
         , toolbar: {
             groups: [
                 { name:"edit"
@@ -50,7 +50,7 @@ function createModel() {
         }
     }
 
-    // find + return toolbuttons by names
+    /// find + return toolbuttons by names
     function getToolbuttons(names) {
         return names.map(function(name) {
             return toolbuttons[name] || defButton
@@ -155,7 +155,8 @@ function createView(mdl, acts) {
     // toolbar context menu
     function vwContextMenu(model, actions) {
         var attrs = model.viewstate.config.showMnu && {
-                style: { left:(model.viewstate.config.mxyBody.x - 3) + "px"
+                style: { // position ctx menu to contain mouse pos
+                    left:(model.viewstate.config.mxyBody.x - 3) + "px"
                     , top:(model.viewstate.config.mxyBody.y - 3) + "px"
                 } || {}
                 , onmouseleave: viewMgr.hideContextMenu
@@ -187,6 +188,7 @@ function createViewManager(model, actions) {
         setupToolbtnDrag(vnode)
     }
 
+    /// set up dlg to be dragged around by titlebar
     function setupDlgDrag(vnode) {
         var containers = [ vnode.dom.parentNode ] // dlg<workspace
             , opts = {
@@ -210,8 +212,10 @@ function createViewManager(model, actions) {
             })
     }
 
+    // set up for buttons to be dragged onto/off toolbar
     function setupToolbtnDrag(vnode) {
-        var app = vnode.dom.parentNode.parentNode
+        var // dialog<workspace<app
+            app = vnode.dom.parentNode.parentNode
             , containers = [
                 // app>toolbar>group
                 app.children[0].children[1]
@@ -249,7 +253,7 @@ function createViewManager(model, actions) {
             })
     }
 
-    // track + save mouse position
+    /// track + save mouse position on body
     function trackBodyMxy(ok) {
         if (ok) {
             document.body.addEventListener("mousemove", onMouseMove, false)
@@ -262,6 +266,7 @@ function createViewManager(model, actions) {
         }
     }
 
+    /// save mouse/touch position as measured from widget top/left
     function saveWidgetMxy(evt) {
         var pos = findPos(evt.target)
             , xy = evt.type == "touchstart"
@@ -282,7 +287,7 @@ function createViewManager(model, actions) {
         return {x:curleft, y:curtop};
     }
 
-    // puff-of-smoke effect at {x, y}
+    /// puff-of-smoke effect at {x, y}
     function puffAt(xy) {
         var el = document.createElement("div")
         el.className = "puff puff-animated"
